@@ -1,0 +1,25 @@
+// config.h.example - copy this file to config.h and fill in your own values.
+// config.h is .gitignore'd so your secrets never leave your machine.
+
+#pragma once
+
+// --- WiFi -------------------------------------------------------------------
+#define WIFI_SSID      "your-wifi-ssid"
+#define WIFI_PASSWORD  "your-wifi-password"
+
+// --- MQTT broker ------------------------------------------------------------
+#define MQTT_HOST              "broker.hivemq.com"
+#define MQTT_PORT              1883
+#define MQTT_CLIENT_ID         "fluidwire-esp32-dfplayer"
+#define MQTT_USER              ""
+#define MQTT_PASSWORD          ""
+#define MQTT_TOPIC_ALERT_BASE  "fluidwire/demo/dfplayer/alert"
+#define MQTT_TOPIC_STATUS      "fluidwire/demo/dfplayer/status"
+
+// --- DFPlayer -----------------------------------------------------------
+#define DFPLAYER_VOLUME  20   // 0-30
+
+// Most DFPlayer Mini breakouts pull BUSY LOW while a clip is playing.
+// If your board's log shows the opposite (busy=1 while audio is clearly
+// playing), set this to false and reflash.
+#define DFPLAYER_BUSY_ACTIVE_LOW  true
